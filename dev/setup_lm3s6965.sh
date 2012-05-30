@@ -12,8 +12,8 @@
 
 yaourt -S arm-none-eabi
 
-INTERFACE_CFG_URL=http://andrewsterian.com/Downloads/ARM/luminary-ek-lm3s6965.cfg
-BOARD_CFG_URLhttp://andrewsterian.com/Downloads/ARM/ek-lm3s6965.cfg
+INTERFACE_CFG_URL="http://andrewsterian.com/Downloads/ARM/luminary-ek-lm3s6965.cfg"
+BOARD_CFG_URL="http://andrewsterian.com/Downloads/ARM/ek-lm3s6965.cfg"
 
 
 mkdir ~/OpenOCD
@@ -29,13 +29,9 @@ sudo pacman -S --noconfirm openocd
 wget $INTERFACE_CFG_URL 
 wget $BOARD_CFG_URL
 
-sudo cp ek-lm3s6965.cfg /usr/local/share/openocd/scripts/board
-sudo cp luminary-ek-lm3s6965.cfg /usr/local/share/openocd/scripts/interface
+sudo cp ek-lm3s6965.cfg /usr/share/openocd/scripts/board
+sudo cp luminary-ek-lm3s6965.cfg /usr/share/openocd/scripts/interface
 
 #make sure openocd is ran as root!
 echo "Ta da!  Use \"sudo openocd -f /usr/local/share/openocd/scripts/board/ek-lm3s6965.cfg\" to start the OpenOCD server."
-
-
-
-
 
