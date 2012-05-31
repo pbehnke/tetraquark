@@ -1,5 +1,5 @@
 # Modify as appropriate
-STELLARISWARE=/home/phil/StellarisWare
+STELLARISWARE=/home/phil/tetraquark/StellarisWare
 
 CC=arm-none-eabi-gcc -Wall -Os -g -march=armv7-m -mcpu=cortex-m3 -mthumb -mfix-cortex-m3-ldrd -Wl,--gc-sections
 	

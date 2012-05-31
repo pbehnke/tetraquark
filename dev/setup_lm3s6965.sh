@@ -24,13 +24,13 @@ cd ~/OpenOCD
 sudo pacman -S --noconfirm libftdi
 
 #get OpenOCD
-sudo pacman -S --noconfirm openocd
+yaourt -S openocd-git-libftdi
 
-wget $INTERFACE_CFG_URL 
-wget $BOARD_CFG_URL
+#wget $INTERFACE_CFG_URL 
+#wget $BOARD_CFG_URL
 
-sudo cp ek-lm3s6965.cfg /usr/share/openocd/scripts/board
-sudo cp luminary-ek-lm3s6965.cfg /usr/share/openocd/scripts/interface
+#sudo cp ek-lm3s6965.cfg /usr/share/openocd/scripts/board
+#sudo cp luminary-ek-lm3s6965.cfg /usr/share/openocd/scripts/interface
 
 #make sure openocd is ran as root!
 echo "Ta da!  Use \"sudo openocd -f /usr/local/share/openocd/scripts/board/ek-lm3s6965.cfg\" to start the OpenOCD server."
